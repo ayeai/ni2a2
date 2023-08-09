@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>ChatGPT Web Interface</title>
+</head>
+<body>
+  <div class="container">
+    <!-- API Key input and conversation tabs -->
+    <div class="header">
+      <div>
+        <label for="api-key">API Key:</label>
+        <input type="text" id="api-key">
+        <button id="apply-api-key">Apply API Key</button>
+      </div>
+      <div class="conversation-tabs">
+        <button class="tab" id="new-conversation-button">New Conversation</button>
+        <button class="tab active" id="current-conversation-button">Current Conversation</button>
+      </div>
+    </div>
+    <!-- Chat box and user input -->
+    <div id="chat-box">
+      <div id="conversation" class="conversation"></div>
+    </div>
+    <div class="user-input">
+      <input type="text" id="user-message" placeholder="Type your message...">
+      <button id="send-button">Send</button>
+      <div class="audio-controls">
+        <button id="record-button" title="Record"><i class="fas fa-microphone"></i></button>
+        <button id="play-button" title="Play"><i class="fas fa-play"></i></button>
+        <button id="pause-button" title="Pause"><i class="fas fa-pause"></i></button>
+        <button id="stop-button" title="Stop"><i class="fas fa-stop"></i></button>
+        <div id="record-time">00:00</div>
+      </div>
+      <button id="take-photo-button" title="Take Photo"><i class="fas fa-camera"></i></button>
+      <button id="start-speech-recognition-button">Start Speech Recognition</button>
+      <button id="download-button">Download</button>
+      <button id="copy-conversation-button">Copy Conversation</button>
+      <button id="read-response-button">Read Response</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
